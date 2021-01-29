@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="548.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.AnaliseViewController">
+    <children>
+        <JFXTabPane tabClosingPolicy="UNAVAILABLE" HBox.hgrow="ALWAYS">
+            <tabs>
+                <Tab closable="false" style="-fx-background-color: #00E241;" text="Analiz">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox prefHeight="386.0" prefWidth="393.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox alignment="BOTTOM_CENTER" prefHeight="65.0" VBox.vgrow="NEVER">
+                                            <children>
+                                                <JFXTextField fx:id="analiseSearch" labelFloat="true" prefWidth="250.0" promptText="Qidirish">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="System Italic" size="16.0" />
+                                                    </font>
+                                                </JFXTextField>
+                                                <JFXButton fx:id="analiseClearB" buttonType="RAISED" cache="true" contentDisplay="CENTER" onAction="#analiseSearchFieldClear" prefHeight="21.0" prefWidth="21.0" style="-fx-background-radius: 20;" text=" " textFill="#ff6f21" HBox.hgrow="NEVER">
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#c36813" glyphName="CLOSE_CIRCLE_OUTLINE" size="25" strokeLineCap="ROUND" strokeMiterLimit="5.0">
+                                                            <cursor>
+                                                                <Cursor fx:constant="DEFAULT" />
+                                                            </cursor>
+                                                        </MaterialDesignIconView>
+                                                    </graphic>
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                    <padding>
+                                                        <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                                    </padding>
+                                                </JFXButton>
+                                            </children>
+                                        </HBox>
+                                        <TableView fx:id="analiseTableV" depthTest="ENABLE" prefHeight="440.0" prefWidth="414.0" style="-fx-font-size: 15;" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="analise_name" editable="false" maxWidth="380.0" minWidth="74.0" prefWidth="138.0" text="Nomi" />
+                                                <TableColumn fx:id="analise_cost" maxWidth="406.0" minWidth="34.0" prefWidth="137.0" text="Narxi" />
+                                                <TableColumn fx:id="analise_button" editable="false" maxWidth="459.0" minWidth="60.0" prefWidth="137.0" resizable="false" sortable="false" text="qo'shish" />
+                                            </columns>
+                                            <VBox.margin>
+                                                <Insets right="10.0" />
+                                            </VBox.margin>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab style="-fx-background-color: #ff6100;" text="Tekshirish">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox prefHeight="386.0" prefWidth="393.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox alignment="BOTTOM_CENTER" prefHeight="65.0" VBox.vgrow="NEVER">
+                                            <children>
+                                                <JFXTextField fx:id="tekshiruvSearch" labelFloat="true" prefWidth="250.0" promptText="Qidirish">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="System Italic" size="16.0" />
+                                                    </font>
+                                                </JFXTextField>
+                                                <JFXButton fx:id="tekshirishClearB" buttonType="RAISED" cache="true" contentDisplay="CENTER" onAction="#tekshirishSearchFieldClear" prefHeight="21.0" prefWidth="21.0" style="-fx-background-radius: 20;" text=" " textFill="#ff6f21" HBox.hgrow="NEVER">
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#c36813" glyphName="CLOSE_CIRCLE_OUTLINE" size="25" strokeLineCap="ROUND" strokeMiterLimit="5.0">
+                                                            <cursor>
+                                                                <Cursor fx:constant="DEFAULT" />
+                                                            </cursor>
+                                                        </MaterialDesignIconView>
+                                                    </graphic>
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                    <padding>
+                                                        <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                                    </padding>
+                                                </JFXButton>
+                                            </children>
+                                        </HBox>
+                                        <TableView fx:id="tekshirishTableV" style="-fx-font-size: 15;" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="tekshirish_name" prefWidth="62.0" text="Nomi" />
+                                                <TableColumn fx:id="tekshirish_cost" prefWidth="99.0" text="Narxi" />
+                                                <TableColumn fx:id="tekshirish_button" prefWidth="61.0" text="Qo'shish" />
+                                            </columns>
+                                            <VBox.margin>
+                                                <Insets right="10.0" />
+                                            </VBox.margin>
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                            </columnResizePolicy>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab style="-fx-background-color: #b458a5;" text=" Konsultatsiya">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox prefHeight="386.0" prefWidth="393.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <HBox alignment="BOTTOM_CENTER" prefHeight="65.0" VBox.vgrow="NEVER">
+                                            <children>
+                                                <JFXTextField fx:id="konsultatSearch" labelFloat="true" prefWidth="250.0" promptText="Qidirish">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="System Italic" size="16.0" />
+                                                    </font>
+                                                </JFXTextField>
+                                                <JFXButton fx:id="konsultatsiyaClearB" buttonType="RAISED" cache="true" contentDisplay="CENTER" onAction="#konsultatSearchFieldClear" prefHeight="21.0" prefWidth="21.0" style="-fx-background-radius: 20;" text=" " textFill="#ff6f21" HBox.hgrow="NEVER">
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#c36813" glyphName="CLOSE_CIRCLE_OUTLINE" size="25" strokeLineCap="ROUND" strokeMiterLimit="5.0">
+                                                            <cursor>
+                                                                <Cursor fx:constant="DEFAULT" />
+                                                            </cursor>
+                                                        </MaterialDesignIconView>
+                                                    </graphic>
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                    <cursor>
+                                                        <Cursor fx:constant="HAND" />
+                                                    </cursor>
+                                                    <padding>
+                                                        <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                                    </padding>
+                                                </JFXButton>
+                                            </children>
+                                        </HBox>
+                                        <TableView fx:id="konsultatsiyaTableV" prefHeight="440.0" prefWidth="414.0" style="-fx-font-size: 15;" VBox.vgrow="ALWAYS">
+                                            <columns>
+                                                <TableColumn fx:id="konsultatsiya_name" prefWidth="55.0" text="Nomi" />
+                                                <TableColumn fx:id="konsultatsiya_cost" prefWidth="75.0" text="Narxi" />
+                                                <TableColumn fx:id="konsultatsiya_button" minWidth="-Infinity" prefWidth="100.0" text="Qo'shish" />
+                                            </columns>
+                                            <VBox.margin>
+                                                <Insets right="10.0" />
+                                            </VBox.margin>
+                                            <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                            </columnResizePolicy>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </JFXTabPane>
+        <VBox HBox.hgrow="ALWAYS">
+            <children>
+                <AnchorPane VBox.vgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER_RIGHT" layoutY="1.0" prefHeight="70.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <JFXButton fx:id="addPatientButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" onAction="#addPatient" prefHeight="50.0" prefWidth="60.0" ripplerFill="#900382" text=" " textFill="#900382">
+                                    <graphic>
+                                        <MaterialDesignIconView fill="#7c0374" glyphName="ACCOUNT_PLUS" size="30" />
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton fx:id="editPatientButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" layoutX="10.0" layoutY="10.0" onAction="#editPatient" prefHeight="50.0" prefWidth="60.0" ripplerFill="#1384d6" style="-fx-background-radius: 5;" text=" " textFill="#1384d6">
+                                    <graphic>
+                                        <MaterialDesignIconView fill="#7c0374" glyphName="PENCIL" size="30" />
+                                    </graphic>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </JFXButton>
+                            </children>
+                            <padding>
+                                <Insets right="20.0" top="10.0" />
+                            </padding>
+                        </HBox>
+                        <TableView layoutY="83.0" prefHeight="547.0" prefWidth="285.0" style="-fx-font-size: 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="112.0" fx:id="xizmatTableView">
+                            <columns>
+                                <TableColumn fx:id="order_num" editable="false" prefWidth="40.0" resizable="false" text="№" />
+                                <TableColumn fx:id="order_button" editable="false" minWidth="50.0" prefWidth="60.0" resizable="false" sortable="false" text="Cancel" />
+                                <TableColumn fx:id="order_name" editable="false" minWidth="150.0" prefWidth="150.0" text="Nomi" />
+                                <TableColumn fx:id="order_cost" editable="false" minWidth="150.0" prefWidth="150.0" text="Narxi" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <VBox alignment="TOP_CENTER" prefHeight="548.0" prefWidth="139.0" spacing="15.0">
+            <children>
+                <MaterialDesignIconView fill="#7c0374" glyphName="ACCOUNT_CIRCLE" size="35" />
+                <Label fx:id="fioLab" text="--  --" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="Arial Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Separator prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets top="2.0" />
+                    </VBox.margin>
+                </Separator>
+                <MaterialDesignIconView fill="#7c0374" glyphName="CASH" size="40" />
+                <Label fx:id="summaLab" layoutX="10.0" layoutY="75.0" text="0.0" textAlignment="CENTER" textFill="#c67006">
+                    <font>
+                        <Font name="Arial Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Separator layoutX="10.0" layoutY="105.0" prefWidth="200.0" />
+                <VBox alignment="BOTTOM_CENTER" spacing="20.0" VBox.vgrow="ALWAYS">
+                    <children>
+                        <JFXButton fx:id="clearButton" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" onAction="#clearOrderList" prefHeight="39.0" prefWidth="73.0" ripplerFill="#2c0202" style="-fx-background-color: #ff0000; -fx-background-radius: 10;" text=" ">
+                            <graphic>
+                                <MaterialDesignIconView fill="#790707" glyphName="CLOSE_BOX_OUTLINE" size="30" textAlignment="CENTER" />
+                            </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="okButton" alignment="CENTER" buttonType="RAISED" contentDisplay="RIGHT" focusTraversable="false" onAction="#okNext" prefHeight="51.0" prefWidth="100.0" ripplerFill="#1b5b10" style="-fx-background-color: #18b506; -fx-background-radius: 10;" text="OK" textFill="#14570e">
+                            <graphic>
+                                <MaterialDesignIconView fill="#14570e" glyphName="CHECKBOX_MARKED_OUTLINE" size="24" />
+                            </graphic>
+                            <font>
+                                <Font name="Arial Bold" size="20.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets bottom="30.0" />
+                    </padding>
+                </VBox>
+            </children>
+            <padding>
+                <Insets top="25.0" />
+            </padding>
+        </VBox>
+    </children>
+</HBox>

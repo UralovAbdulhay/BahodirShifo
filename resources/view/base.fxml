@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="535.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.BaseController">
+    <children>
+        <JFXTabPane fx:id="parentTabPane" prefHeight="535.0" prefWidth="723.0" stylesheets="@../styles/style1.css" VBox.vgrow="ALWAYS">
+            <tabs>
+                <Tab fx:id="bemorTab" closable="false" onSelectionChanged="#SelectionChanged" text="Bemor">
+                    <content>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="700.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <JFXTextField fx:id="bemorQidir" labelFloat="true" prefHeight="30.0" prefWidth="368.0" promptText="Qidirish" style="-fx-background-radius: 15; -fx-border-color: transparent; -fx-border-radius: 15; -fx-border-width: 1.5;" text="sxz">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXButton fx:id="bemorQidirCls" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tozalaQidir" text=" ">
+                                            <font>
+                                                <Font name="Arial Black" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                            <graphic>
+                                                <MaterialDesignIconView fill="#bf0000" glyphName="CLOSE_CIRCLE_OUTLINE" nodeOrientation="LEFT_TO_RIGHT" size="28" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" />
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                            </padding>
+                                        </JFXButton>
+                                        <HBox alignment="CENTER_RIGHT" spacing="30.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <JFXButton fx:id="delPrBt" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="71.0" layoutY="21.0" mnemonicParsing="false" onAction="#deletePriseConfirmWithCheckBox" prefHeight="30.0" prefWidth="50.0" ripplerFill="#e127d4" style="-fx-background-color: #ff5000; -fx-background-radius: 5;" text=" " visible="false">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="CHECKBOX_MARKED_OUTLINE" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="bemorAddBt" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#bemorAddAction" prefHeight="30.0" prefWidth="50.0" ripplerFill="#2ca124" style="-fx-background-color: #3ad62f; -fx-background-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="PLAYLIST_PLUS" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <ToggleButton fx:id="bemorDelBt" contentDisplay="CENTER" mnemonicParsing="false" onAction="#bemorDelAction" prefHeight="30.0" prefWidth="50.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="11.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="DELETE" size="28" strokeType="INSIDE" />
+                                                    </graphic>
+                                                </ToggleButton>
+                                            </children>
+                                            <padding>
+                                                <Insets right="40.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets top="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <TableView fx:id="bemorTable" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="analiseTab" closable="false" onSelectionChanged="#SelectionChanged" text="Analise">
+                    <content>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="700.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <JFXTextField fx:id="analiseQidir" labelFloat="true" prefHeight="30.0" prefWidth="368.0" promptText="Qidirish" style="-fx-background-radius: 15; -fx-border-color: transparent; -fx-border-radius: 15; -fx-border-width: 1.5;" text="sxz">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXButton fx:id="analiseQidirCls" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tozalaQidir" text=" ">
+                                            <font>
+                                                <Font name="Arial Black" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                            <graphic>
+                                                <MaterialDesignIconView fill="#bf0000" glyphName="CLOSE_CIRCLE_OUTLINE" nodeOrientation="LEFT_TO_RIGHT" size="28" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" />
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                            </padding>
+                                        </JFXButton>
+                                        <HBox alignment="CENTER_RIGHT" spacing="30.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <JFXButton fx:id="delPrBt1" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="71.0" layoutY="21.0" mnemonicParsing="false" onAction="#deletePriseConfirmWithCheckBox" prefHeight="30.0" prefWidth="50.0" ripplerFill="#e127d4" style="-fx-background-color: #ff5000; -fx-background-radius: 5;" text=" " visible="false">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="CHECKBOX_MARKED_OUTLINE" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="analiseAddBt" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#analiseAddAction" prefHeight="30.0" prefWidth="50.0" ripplerFill="#2ca124" style="-fx-background-color: #3ad62f; -fx-background-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="PLAYLIST_PLUS" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <ToggleButton fx:id="analiseDelBt" contentDisplay="CENTER" mnemonicParsing="false" onAction="#analiseDelAction" prefHeight="30.0" prefWidth="50.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="11.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="DELETE" onDragDetected="#analiseDelAction" size="28" strokeType="INSIDE" />
+                                                    </graphic>
+                                                </ToggleButton>
+                                            </children>
+                                            <padding>
+                                                <Insets right="40.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets top="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <TableView fx:id="analiseTable" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="tekshirishTab" closable="false" onSelectionChanged="#SelectionChanged" text="Tekshirish">
+                    <content>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="700.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <JFXTextField fx:id="tekshirishQidir" labelFloat="true" prefHeight="30.0" prefWidth="368.0" promptText="Qidirish" style="-fx-background-radius: 15; -fx-border-color: transparent; -fx-border-radius: 15; -fx-border-width: 1.5;" text="sxz">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXButton fx:id="tekshirishQidirCls" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tozalaQidir" text=" ">
+                                            <font>
+                                                <Font name="Arial Black" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                            <graphic>
+                                                <MaterialDesignIconView fill="#bf0000" glyphName="CLOSE_CIRCLE_OUTLINE" nodeOrientation="LEFT_TO_RIGHT" size="28" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" />
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                            </padding>
+                                        </JFXButton>
+                                        <HBox alignment="CENTER_RIGHT" spacing="30.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <JFXButton fx:id="delPrBt2" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="71.0" layoutY="21.0" mnemonicParsing="false" onAction="#deletePriseConfirmWithCheckBox" prefHeight="30.0" prefWidth="50.0" ripplerFill="#e127d4" style="-fx-background-color: #ff5000; -fx-background-radius: 5;" text=" " visible="false">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="CHECKBOX_MARKED_OUTLINE" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="tekshirishAddBt" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tekshirishAddAction" prefHeight="30.0" prefWidth="50.0" ripplerFill="#2ca124" style="-fx-background-color: #3ad62f; -fx-background-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="PLAYLIST_PLUS" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <ToggleButton fx:id="tekshirishDelBt" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tekshirishDelAction" prefHeight="30.0" prefWidth="50.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="11.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="DELETE" size="28" strokeType="INSIDE" />
+                                                    </graphic>
+                                                </ToggleButton>
+                                            </children>
+                                            <padding>
+                                                <Insets right="40.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets top="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <TableView fx:id="tekshirishTable" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="konsultatsiyaTab" closable="false" onSelectionChanged="#SelectionChanged" text="Konsultatsiya">
+                    <content>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="700.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <JFXTextField fx:id="konsultatsiyaQidir" labelFloat="true" prefHeight="30.0" prefWidth="368.0" promptText="Qidirish" style="-fx-background-radius: 15; -fx-border-color: transparent; -fx-border-radius: 15; -fx-border-width: 1.5;" text="sxz">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXButton fx:id="konsultatsiyaQidirCls" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tozalaQidir" text=" ">
+                                            <font>
+                                                <Font name="Arial Black" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                            <graphic>
+                                                <MaterialDesignIconView fill="#bf0000" glyphName="CLOSE_CIRCLE_OUTLINE" nodeOrientation="LEFT_TO_RIGHT" size="28" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" />
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                            </padding>
+                                        </JFXButton>
+                                        <HBox alignment="CENTER_RIGHT" spacing="30.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <JFXButton fx:id="delPrBt11" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="71.0" layoutY="21.0" mnemonicParsing="false" onAction="#deletePriseConfirmWithCheckBox" prefHeight="30.0" prefWidth="50.0" ripplerFill="#e127d4" style="-fx-background-color: #ff5000; -fx-background-radius: 5;" text=" " visible="false">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="CHECKBOX_MARKED_OUTLINE" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="konsultatsiyaAddBt" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#konsultatsiyaAddAction" prefHeight="30.0" prefWidth="50.0" ripplerFill="#2ca124" style="-fx-background-color: #3ad62f; -fx-background-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="PLAYLIST_PLUS" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <ToggleButton fx:id="konsultatsiyaDelBt" contentDisplay="CENTER" mnemonicParsing="false" onAction="#konsultatsiyaDelAction" prefHeight="30.0" prefWidth="50.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="11.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="DELETE" size="28" strokeType="INSIDE" />
+                                                    </graphic>
+                                                </ToggleButton>
+                                            </children>
+                                            <padding>
+                                                <Insets right="40.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets top="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <TableView fx:id="konsultatsiyaTable" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="qabulTab" closable="false" onSelectionChanged="#SelectionChanged" text="Qabul">
+                    <content>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="700.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <JFXTextField fx:id="qabulQidir" labelFloat="true" prefHeight="30.0" prefWidth="368.0" promptText="Qidirish" style="-fx-background-radius: 15; -fx-border-color: transparent; -fx-border-radius: 15; -fx-border-width: 1.5;" text="sxz">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXButton fx:id="qabulQidirCls" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tozalaQidir" text=" ">
+                                            <font>
+                                                <Font name="Arial Black" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                            <graphic>
+                                                <MaterialDesignIconView fill="#bf0000" glyphName="CLOSE_CIRCLE_OUTLINE" nodeOrientation="LEFT_TO_RIGHT" size="28" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" />
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                            </padding>
+                                        </JFXButton>
+                                        <HBox alignment="CENTER_RIGHT" spacing="30.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <JFXButton fx:id="delPrBt3" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="71.0" layoutY="21.0" mnemonicParsing="false" onAction="#deletePriseConfirmWithCheckBox" prefHeight="30.0" prefWidth="50.0" ripplerFill="#e127d4" style="-fx-background-color: #ff5000; -fx-background-radius: 5;" text=" " visible="false">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="CHECKBOX_MARKED_OUTLINE" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <ToggleButton fx:id="qabulDelBt" contentDisplay="CENTER" mnemonicParsing="false" onAction="#qabulDelAction" prefHeight="30.0" prefWidth="50.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="11.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="DELETE" size="28" strokeType="INSIDE" />
+                                                    </graphic>
+                                                </ToggleButton>
+                                            </children>
+                                            <padding>
+                                                <Insets right="40.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets top="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <TableView fx:id="qabulTable" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="vrachTab" closable="false" onSelectionChanged="#SelectionChanged" text="Vrach">
+                    <content>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="700.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <JFXTextField fx:id="vrachQidir" labelFloat="true" prefHeight="30.0" prefWidth="368.0" promptText="Qidirish" style="-fx-background-radius: 15; -fx-border-color: transparent; -fx-border-radius: 15; -fx-border-width: 1.5;" text="sxz">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXButton fx:id="vtachQidirCls" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tozalaQidir" text=" ">
+                                            <font>
+                                                <Font name="Arial Black" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                            <graphic>
+                                                <MaterialDesignIconView fill="#bf0000" glyphName="CLOSE_CIRCLE_OUTLINE" nodeOrientation="LEFT_TO_RIGHT" size="28" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" />
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                            </padding>
+                                        </JFXButton>
+                                        <HBox alignment="CENTER_RIGHT" spacing="30.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <JFXButton fx:id="delPrBt12" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="71.0" layoutY="21.0" mnemonicParsing="false" onAction="#deletePriseConfirmWithCheckBox" prefHeight="30.0" prefWidth="50.0" ripplerFill="#e127d4" style="-fx-background-color: #ff5000; -fx-background-radius: 5;" text=" " visible="false">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="CHECKBOX_MARKED_OUTLINE" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="vrachAddBt" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#vrachAddAction" prefHeight="30.0" prefWidth="50.0" ripplerFill="#2ca124" style="-fx-background-color: #3ad62f; -fx-background-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="PLAYLIST_PLUS" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <ToggleButton fx:id="vrachDelBt" contentDisplay="CENTER" mnemonicParsing="false" onAction="#vrachDelAction" prefHeight="30.0" prefWidth="50.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="11.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="DELETE" size="28" strokeType="INSIDE" />
+                                                    </graphic>
+                                                </ToggleButton>
+                                            </children>
+                                            <padding>
+                                                <Insets right="40.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets top="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <TableView fx:id="vrachTable" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="kasbTab" closable="false" onSelectionChanged="#SelectionChanged" text="Kasb">
+                    <content>
+                        <VBox alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="700.0" VBox.vgrow="NEVER">
+                                    <children>
+                                        <JFXTextField fx:id="kasbQidir" labelFloat="true" prefHeight="30.0" prefWidth="368.0" promptText="Qidirish" style="-fx-background-radius: 15; -fx-border-color: transparent; -fx-border-radius: 15; -fx-border-width: 1.5;" text="sxz">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                        </JFXTextField>
+                                        <JFXButton fx:id="kasbQidirCls" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#tozalaQidir" text=" ">
+                                            <font>
+                                                <Font name="Arial Black" size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="5.0" />
+                                            </HBox.margin>
+                                            <graphic>
+                                                <MaterialDesignIconView fill="#bf0000" glyphName="CLOSE_CIRCLE_OUTLINE" nodeOrientation="LEFT_TO_RIGHT" size="28" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" />
+                                            </graphic>
+                                            <padding>
+                                                <Insets bottom="-2.0" left="-2.0" right="-2.0" top="-2.0" />
+                                            </padding>
+                                        </JFXButton>
+                                        <HBox alignment="CENTER_RIGHT" spacing="30.0" HBox.hgrow="ALWAYS">
+                                            <children>
+                                                <JFXButton fx:id="delPrBt21" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="71.0" layoutY="21.0" mnemonicParsing="false" onAction="#deletePriseConfirmWithCheckBox" prefHeight="30.0" prefWidth="50.0" ripplerFill="#e127d4" style="-fx-background-color: #ff5000; -fx-background-radius: 5;" text=" " visible="false">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="CHECKBOX_MARKED_OUTLINE" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <JFXButton fx:id="kasbAddBt" buttonType="RAISED" contentDisplay="CENTER" mnemonicParsing="false" onAction="#kasbAddAction" prefHeight="30.0" prefWidth="50.0" ripplerFill="#2ca124" style="-fx-background-color: #3ad62f; -fx-background-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="13.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="PLAYLIST_PLUS" size="28" />
+                                                    </graphic>
+                                                </JFXButton>
+                                                <ToggleButton fx:id="kasbDelBt" contentDisplay="CENTER" mnemonicParsing="false" onAction="#kasbDelAction" prefHeight="30.0" prefWidth="50.0" style="-fx-background-radius: 5; -fx-border-radius: 5;" text=" ">
+                                                    <font>
+                                                        <Font name="Verdana" size="11.0" />
+                                                    </font>
+                                                    <graphic>
+                                                        <MaterialDesignIconView fill="#2d3b9d" glyphName="DELETE" size="28" strokeType="INSIDE" />
+                                                    </graphic>
+                                                </ToggleButton>
+                                            </children>
+                                            <padding>
+                                                <Insets right="40.0" />
+                                            </padding>
+                                        </HBox>
+                                    </children>
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <VBox.margin>
+                                        <Insets top="15.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <TableView fx:id="kasbTable" HBox.hgrow="ALWAYS">
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                            </HBox.margin>
+                                        </TableView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </JFXTabPane>
+    </children>
+</VBox>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="435.0" prefWidth="399.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.TulovController">
+    <children>
+        <JFXTextField fx:id="summaTF" alignment="CENTER" focusTraversable="false" labelFloat="true" layoutX="90.0" layoutY="26.0" onKeyReleased="#changeSumm" prefHeight="36.0" prefWidth="220.0" promptText="Summa">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </JFXTextField>
+        <Separator layoutX="43.0" layoutY="164.0" prefHeight="1.0" prefWidth="308.0" />
+        <JFXRadioButton fx:id="plastikRB" focusTraversable="false" layoutX="223.0" layoutY="196.0" onAction="#radioSelected" text="Terminal">
+            <toggleGroup>
+                <ToggleGroup fx:id="bigGroup" />
+            </toggleGroup>
+        </JFXRadioButton>
+        <JFXRadioButton fx:id="terminalRB" focusTraversable="false" layoutX="251.0" layoutY="235.0" selected="true" text="Terminal">
+            <toggleGroup>
+                <ToggleGroup fx:id="littleGroup" />
+            </toggleGroup>
+        </JFXRadioButton>
+        <JFXRadioButton fx:id="clikRB" focusTraversable="false" layoutX="254.0" layoutY="275.0" text="Clik" toggleGroup="$littleGroup" />
+        <JFXCheckBox fx:id="checkedBox" alignment="CENTER" contentDisplay="BOTTOM" focusTraversable="false" layoutX="91.0" layoutY="245.0" prefHeight="36.0" prefWidth="93.0" text="Check">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </JFXCheckBox>
+        <JFXRadioButton fx:id="naqtRB" focusTraversable="false" layoutX="64.0" layoutY="195.0" onAction="#radioSelected" prefHeight="30.0" prefWidth="100.0" selected="true" text="Naqt" toggleGroup="$bigGroup" />
+        <Separator layoutX="197.0" layoutY="183.0" orientation="VERTICAL" prefHeight="120.0" prefWidth="7.0" />
+        <Separator layoutX="43.0" layoutY="321.0" prefHeight="1.0" prefWidth="308.0" />
+        <JFXButton fx:id="cancelButton" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" layoutX="48.0" layoutY="369.0" onAction="#cancelTulov" prefHeight="40.0" prefWidth="100.0" ripplerFill="#e127d4" style="-fx-background-color: #ff5000; -fx-background-radius: 10;" text=" ">
+            <graphic>
+                <MaterialDesignIconView fill="#750202" glyphName="CLOSE_BOX_OUTLINE" size="30" />
+            </graphic>
+        </JFXButton>
+        <JFXButton fx:id="okButton" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" layoutX="254.0" layoutY="369.0" onAction="#okTulov" prefHeight="40.0" prefWidth="100.0" ripplerFill="#554ffc" style="-fx-background-color: #07bf14; -fx-background-radius: 10;" text=" ">
+            <graphic>
+                <MaterialDesignIconView fill="#0c6507" glyphName="CHECKBOX_MARKED_OUTLINE" size="30" />
+            </graphic>
+        </JFXButton>
+        <JFXCheckBox fx:id="saleCheck" alignment="TOP_LEFT" contentDisplay="TOP" focusTraversable="false" layoutX="35.0" layoutY="122.0" onAction="#saleCheckAction" text="Chegirma" />
+        <JFXTextField fx:id="saleTF" alignment="CENTER" disable="true" focusTraversable="false" labelFloat="true" layoutX="132.0" layoutY="94.0" onKeyReleased="#setSale" prefHeight="44.0" prefWidth="136.0" promptText="Chegirma (%)">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </JFXTextField>
+    </children>
+
+</AnchorPane>
