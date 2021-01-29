@@ -7,6 +7,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Tab;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
 
@@ -247,5 +248,11 @@ public class BaseController implements Initializable {
 
     }
 
+
+    private <S, T> TableColumn<S, T> creatTabCol(String title) {
+        TableColumn<S, T> newColumn = new TableColumn<S, T>(title);
+        newColumn.setStyle("-fx-alignment: CENTER");
+        return newColumn;
+    }
 
 }
